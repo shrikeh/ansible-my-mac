@@ -1,4 +1,6 @@
 ---
+brew_php56_profile_insert: 'export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"'
+brew_php56_profile_file: "{{ shell_profile_file }}"
 brew_php56_install_options:
   - with-enchant
   - with-gmp
@@ -11,5 +13,5 @@ brew_php56_install_options:
   - with-snmp
   - with-tidy
   - without-apache
-  
+
 ...

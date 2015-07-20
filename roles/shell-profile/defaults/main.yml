@@ -1,0 +1,4 @@
+---
+shell_profile_file: ~/.profile
+shell_profile_template: 'profile.j2'
+...

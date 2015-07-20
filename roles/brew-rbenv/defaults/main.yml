@@ -1,4 +1,6 @@
 ---
+brew_rbenv_profile_file: "{{ shell_profile_file }}"
+brew_rbenv_profile_insert: 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi'
 brew_rbenv_extras:
   - rbenv-readline
   - rbenv-vars

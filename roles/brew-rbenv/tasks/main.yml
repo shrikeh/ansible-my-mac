@@ -14,4 +14,12 @@
     name: "{{ item }}"
     state: latest
   with_items: brew_rbenv_extras
+
+- name: Add rbenv support to shell
+  lineinfile:
+    dest: "{{ brew_rbenv_profile_file }}"
+    line: "\n{{ brew_rbenv_profile_insert }}"
+    insertafter: EOF
+    state: present
+
 ...

@@ -9,6 +9,15 @@
     name: zsh-completions
     state: latest
 
+- name: Add completions to the profile file
+  lineinfile:
+    line: "\n{{ item }}"
+    state: present
+    dest: "{{ brew_zsh_profile_include }}"
+    insertafter: EOF
+  with_items: brew_zsh_profile_inserts
+
+
 - name: Add ZSH to the list of available shells
   lineinfile:
     line: '/usr/local/bin/zsh'

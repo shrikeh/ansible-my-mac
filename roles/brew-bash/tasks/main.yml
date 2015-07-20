@@ -4,6 +4,13 @@
     name: bash
     state: latest
 
+- name: Ensure .bash_profile exists
+  template:
+      dest: "{{ brew_bash_profile_file }}"
+      mode: 0640
+      src: "{{ brew_bash_profile_file_template }}"
+      force: no
+
 - name: Install bash-completions
   homebrew:
     name: bash-completion
@@ -16,4 +23,11 @@
     dest: '/etc/shells'
     insertafter: EOF
   sudo: yes
+
+- name: Add the profile file
+  lineinfile:
+    line: "\n . {{ brew_bash_profile_include }}"
+    state: present
+    dest: "{{ brew_bash_profile_file }}"
+    insertafter: EOF
 ...

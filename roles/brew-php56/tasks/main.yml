@@ -10,4 +10,11 @@
     name: php56
     state: latest
     install_options: "{{ brew_php56_install_options | join(',') }}"
+
+- name: Add line to the profile file
+  lineinfile:
+    dest: "{{ brew_php56_profile_file }}"
+    line: "\n{{ brew_php56_profile_insert }}"
+    insertafter: EOF
+    state: present
 ...
