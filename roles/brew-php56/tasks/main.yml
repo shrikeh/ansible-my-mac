@@ -1,0 +1,13 @@
+---
+- name: Tap the php5.6 Tap
+  homebrew_tap:
+    tap: homebrew/homebrew-php
+    state: present
+  ignore_errors: true
+
+- name: Install PHP5.6
+  homebrew:
+    name: php56
+    state: latest
+    install_options: "{{ brew_php56_install_options | join(',') }}"
+...

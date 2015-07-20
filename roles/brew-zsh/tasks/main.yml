@@ -1,0 +1,19 @@
+---
+- name: Install ZSH
+  homebrew:
+    name: zsh
+    state: latest
+
+- name: Install ZSH completions
+  homebrew:
+    name: zsh-completions
+    state: latest
+
+- name: Add ZSH to the list of available shells
+  lineinfile:
+    line: '/usr/local/bin/zsh'
+    state: present
+    dest: /etc/shells
+    insertafter: EOF
+  sudo: yes
+...

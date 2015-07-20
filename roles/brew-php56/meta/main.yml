@@ -1,0 +1,6 @@
+---
+dependencies:
+  - { role: brew-tap-dupes }
+  - { role: brew-tap-versions }
+  - { role: brew-curl }
+...

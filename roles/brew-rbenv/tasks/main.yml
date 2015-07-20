@@ -1,0 +1,17 @@
+---
+- name: Install rbenv
+  homebrew:
+    name: rbenv
+    state: latest
+
+- name: Install ruby-build
+  homebrew:
+    name: ruby-build
+    state: latest
+
+- name: Install rbenv addons
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  with_items: brew_rbenv_extras
+...

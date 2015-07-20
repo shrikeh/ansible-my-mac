@@ -1,0 +1,7 @@
+---
+- name: Install vim
+  homebrew:
+    name: vim
+    state: latest
+    install_options: "{{ brew_vim_install_options | join(',') }}"
+...

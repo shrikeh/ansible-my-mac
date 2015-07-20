@@ -1,0 +1,7 @@
+---
+- name: Install Python
+  homebrew:
+    name: python
+    state: latest
+    install_options: force, universal, with-poll, with-berkeley-db4, with-tcl-tk
+...

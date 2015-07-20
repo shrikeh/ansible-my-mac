@@ -1,0 +1,6 @@
+---
+- name: Install nvm
+  homebrew:
+    name: nvm
+    state: latest
+...

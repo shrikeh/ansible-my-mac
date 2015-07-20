@@ -1,0 +1,15 @@
+---
+brew_php56_install_options:
+  - with-enchant
+  - with-gmp
+  - with-homebrew-apxs
+  - with-homebrew-curl
+  - with-homebrew-libxml2
+  - with-homebrew-libxslt
+  - with-imap
+  - with-phpdbg
+  - with-snmp
+  - with-tidy
+  - without-apache
+  
+...

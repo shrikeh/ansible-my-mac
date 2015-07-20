@@ -1,0 +1,10 @@
+---
+- name: Install utilities we need
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - coreutils
+    - findutils
+    - osxutils
+...

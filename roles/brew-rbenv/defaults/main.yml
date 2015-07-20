@@ -1,0 +1,14 @@
+---
+brew_rbenv_extras:
+  - rbenv-readline
+  - rbenv-vars
+  - rbenv-whatis
+  - rbenv-use
+  - rbenv-gem-rehash
+  - rbenv-aliases
+  - rbenv-bundler
+  - rbenv-bundle-exec
+  - rbenv-bundler-ruby-version
+  - rbenv-binstubs
+  - rbenv-default-gems
+...

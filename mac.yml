@@ -1,0 +1,13 @@
+- hosts: mac
+  roles:
+    - { role: brew-bash }
+    - { role: brew-utils }
+    - { role: brew-cask }
+    - { role: brew-python }
+    - { role: brew-openssh }
+    - { role: brew-rbenv }
+    - { role: brew-node }
+    - { role: brew-zsh }
+    - { role: brew-vim }
+    - { role: brew-fizsh }
+    - { role: brew-php56 }

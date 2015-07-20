@@ -1,0 +1,7 @@
+---
+brew_vim_install_options:
+  - with-lua
+  - with-mzscheme
+  - with-luajit
+  - with-tcl
+...

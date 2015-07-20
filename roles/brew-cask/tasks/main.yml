@@ -1,0 +1,6 @@
+---
+- name: Install brew cask
+  homebrew:
+    state: present
+    name: caskroom/cask/brew-cask
+...

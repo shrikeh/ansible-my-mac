@@ -1,0 +1,19 @@
+---
+- name: Install bash
+  homebrew:
+    name: bash
+    state: latest
+
+- name: Install bash-completions
+  homebrew:
+    name: bash-completion
+    state: latest
+
+- name: Add bash to shells
+  lineinfile:
+    line: '/usr/local/bin/bash'
+    state: present
+    dest: '/etc/shells'
+    insertafter: EOF
+  sudo: yes
+...
