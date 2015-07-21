@@ -11,14 +11,14 @@ Host acne-uat uat.acnestudios.com
     ProxyCommand ssh frontdoor nc %h %p
 
 Host 89.167.216.192 89.167.216.188
-    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/melissa/melissa_rsa
+    IdentityFile {{ ssh_config_keys_path.sessiondigital }}/melissa/melissa_rsa
     ProxyCommand ssh fd2session nc %h %p 2>/dev/null
     Port 2211
 
 Host github.com
     Hostname github.com
-    IdentityFile {{ ssh_config_keys_path_personal }}/github/github_rsa
-    UserKnownHostsFile {{ ssh_config_hosts_personal }}/github
+    IdentityFile {{ ssh_config_keys_path.personal }}/github/github_rsa
+    UserKnownHostsFile {{ ssh_config_hosts.personal }}/github
 
 Host web01.missguided.co.uk
     Hostname 172.30.134.44
@@ -81,28 +81,28 @@ Host db06.missguided.co.uk
     Hostname 172.30.134.14
 
 Host *missguided* 172.30.134.*
-    UserKnownHostsFile {{ ssh_config_hosts_sessiondigital }}/missguided
-    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/missguided/missguided_rsa
+    UserKnownHostsFile {{ ssh_config_hosts.sessiondigital }}/missguided
+    IdentityFile {{ ssh_config_keys_path.sessiondigital }}/missguided/missguided_rsa
 
 Host *radley* 162.13.14.40
-    UserKnownHostsFile {{ ssh_config_hosts_sessiondigital }}/radley
-    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/radley/radley_rsa
+    UserKnownHostsFile {{ ssh_config_hosts.sessiondigital }}/radley
+    IdentityFile {{ ssh_config_keys_path.sessiondigital }}/radley/radley_rsa
 
 Host fd2session frontdoor2.sessiondigital.com
     ForwardAgent yes
     Hostname frontdoor2.inviqa.com
-    UserKnownHostsFile {{ ssh_config_hosts_sessiondigital }}/frontdoor
-    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/fd2session/fd2session_rsa
+    UserKnownHostsFile {{ ssh_config_hosts.sessiondigital }}/frontdoor
+    IdentityFile {{ ssh_config_keys_path.sessiondigital }}/fd2session/fd2session_rsa
 
 Host *.inviqa.com
-    UserKnownHostsFile {{ ssh_config_hosts_inviqa }}/default
+    UserKnownHostsFile {{ ssh_config_hosts.inviqa }}/default
 
 Host *.sessiondigital.com
-    UserKnownHostsFile {{ ssh_config_hosts_sessiondigital }}/default
+    UserKnownHostsFile {{ ssh_config_hosts.sessiondigital }}/default
 
 Host 134.213.75.207 164.177.135.8 83.138.162.221
 # ProxyCommand ssh fd2session nc %h %p 2>/dev/null
-    IdentityFile {{ ssh_config_keys_path_inviqa }}/holiday_weather/holiday_weather_rsa
+    IdentityFile {{ ssh_config_keys_path.inviqa }}/holiday_weather/holiday_weather_rsa
 
 Host frontdoor
     HostName frontdoor.inviqa.com
@@ -120,18 +120,18 @@ Host *.frontdoor.inviqa.com
 
 Host !fd2session !frontdoor *.sessiondigital.com *.phplab.co.uk
     ProxyCommand ssh fd2session nc %h %p 2>/dev/null
-    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/session_default/session_default_rsa
+    IdentityFile {{ ssh_config_keys_path.sessiondigital }}/session_default/session_default_rsa
 
 # Digital Ocean
 Host 178.62.* 46.101.* 104.236.*
-    IdentityFile {{ ssh_config_keys_path_personal }}/digital_ocean/digital_ocean_rsa
+    IdentityFile {{ ssh_config_keys_path.personal }}/digital_ocean/digital_ocean_rsa
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
 
 # Rackspace Cloud
 Host 92.52.*
     ProxyCommand ssh fd2session nc %h %p 2>/dev/null
-    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/session_default/session_default_rsa
+    IdentityFile {{ ssh_config_keys_path.sessiondigital }}/session_default/session_default_rsa
 
 Host *
     ForwardAgent no
@@ -143,4 +143,4 @@ Host *
     User {{ ssh_config_default_user }}
     Compression yes
     VisualHostKey yes
-    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/session_default/session_default_rsa
+    IdentityFile {{ ssh_config_keys_path.sessiondigital }}/session_default/session_default_rsa

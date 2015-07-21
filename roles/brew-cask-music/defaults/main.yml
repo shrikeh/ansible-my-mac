@@ -4,4 +4,5 @@ brew_cask_music_casks:
   - airstream
   - spotify
   - spotify-notifications
+  - lastfm
 ...

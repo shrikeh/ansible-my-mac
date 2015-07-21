@@ -1,7 +1,14 @@
 ---
 
+- name: Make the host directories
+  file:
+    state: directory
+    path: "{{ item.value }}"
+    recurse: yes
+  with_dict: ssh_config_hosts
 
 - name: Copy ssh config to the right place
+  template:
     dest: "{{ ssh_config_path }}"
     mode: 0640
     src: "{{ ssh_config_template_path }}"

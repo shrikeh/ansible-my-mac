@@ -1,0 +1,20 @@
+---
+brew_cask_utilities_casks:
+  - flux
+  - dash
+  - alfred
+  - quicksilver
+  - moom
+  - amethyst
+  - istat-menus
+  - hosts
+  - hyperdock
+  - batchmod
+  - xquartz
+  - growlnotify
+  - bartender
+  - fantastical
+  - dnscrypt
+  - gitx
+  - heroku-toolbelt
+...

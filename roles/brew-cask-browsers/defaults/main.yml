@@ -2,4 +2,6 @@
 brew_cask_browsers_casks:
   - firefox
   - google-chrome
+  - chromium
+  - opera
 ...

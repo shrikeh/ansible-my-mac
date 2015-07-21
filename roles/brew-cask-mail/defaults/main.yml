@@ -1,0 +1,7 @@
+---
+brew_cask_mail_casks:
+  - thunderbird
+  - seamonkey
+  - mailbox
+  
+...

@@ -1,0 +1,7 @@
+---
+- name: Install readers
+  homebrew_cask:
+    state: present
+    name: "{{ item }}"
+  with_items: brew_cask_readers_casks
+...

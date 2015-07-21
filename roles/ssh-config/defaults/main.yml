@@ -7,11 +7,13 @@ ssh_config_control_path: ~/.ssh/multiplex
 ssh_config_control_persist: 4h
 ssh_config_default_user: bhanlon
 
-ssh_config_hosts_sessiondigital: ~/.ssh/hosts/sessiondigital
-ssh_config_hosts_inviqa: ~/.ssh/hosts/inviqa
-ssh_config_hosts_personal: ~/.ssh/hosts/personal
+ssh_config_hosts:
+  sessiondigital: ~/.ssh/hosts/sessiondigital
+  inviqa: ~/.ssh/hosts/inviqa
+  personal: ~/.ssh/hosts/personal
 
-ssh_config_keys_path_personal: ~/.ssh/keys/Personal
-ssh_config_keys_path_inviqa: ~/.ssh/keys/Inviqa/
-ssh_config_keys_path_sessiondigital: ~/.ssh/keys/SessionDigital
+ssh_config_keys_path:
+  personal: ~/.ssh/keys/Personal
+  inviqa: ~/.ssh/keys/Inviqa/
+  sessiondigital: ~/.ssh/keys/SessionDigital
 ...

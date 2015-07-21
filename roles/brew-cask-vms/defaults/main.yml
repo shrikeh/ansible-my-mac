@@ -1,0 +1,9 @@
+---
+brew_cask_vms_casks:
+  - virtualbox
+  - vmware-fusion
+  - vagrant
+  - vagrant-manager
+  - vagrant-bar
+
+...

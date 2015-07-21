@@ -1,0 +1,6 @@
+---
+- name: Install Knox
+  homebrew_cask:
+    state: present
+    name: knox
+...
