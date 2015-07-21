@@ -5,4 +5,5 @@ brew_cask_music_casks:
   - spotify
   - spotify-notifications
   - lastfm
+  - audioscrobbler
 ...

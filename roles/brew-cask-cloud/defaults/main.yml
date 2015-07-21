@@ -6,4 +6,5 @@ brew_cask_cloud_casks:
   - mediafire-desktop
   - google-drive
   - steam
+  - crashplan
 ...

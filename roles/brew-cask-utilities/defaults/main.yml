@@ -13,8 +13,12 @@ brew_cask_utilities_casks:
   - xquartz
   - growlnotify
   - bartender
-  - fantastical
   - dnscrypt
   - gitx
   - heroku-toolbelt
+  - utorrent
+  - dropzone
+  - atom
+  - skitch
+  - dupeguru
 ...

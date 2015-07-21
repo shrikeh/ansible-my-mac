@@ -3,4 +3,5 @@ brew_cask_notes_casks:
   - evernote
   - scrivener
   - katana
+  - notational-velocity
 ...

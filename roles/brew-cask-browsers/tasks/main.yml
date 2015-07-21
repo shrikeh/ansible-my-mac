@@ -1,5 +1,5 @@
 ---
-- name: Install proxies
+- name: Install browsers
   homebrew_cask:
     state: present
     name: "{{ item }}"

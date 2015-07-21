@@ -1,0 +1,7 @@
+---
+- name: Install productivity apps
+  homebrew_cask:
+    state: present
+    name: "{{ item }}"
+  with_items: brew_cask_productivity_casks
+...

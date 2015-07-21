@@ -13,14 +13,18 @@
     - { role: brew-fizsh }
     - { role: brew-php56 }
     - { role: brew-s3 }
+    - { role: brew-cask-cloud }
+    - { role: brew-cask-productivity }
     - { role: brew-cask-screensharing }
     - { role: brew-cask-knox }
     - { role: brew-cask-readers }
     - { role: brew-cask-music }
+    - { role: brew-cask-mail }
     - { role: brew-cask-video }
-    - { role: brew-cask-cloud }
+    - { role: brew-cask-omni }
     - { role: brew-cask-money }
     - { role: brew-cask-vms }
+    - { role: brew-cask-mail }
     - { role: brew-cask-docker }
     - { role: brew-cask-handbrake }
     - { role: brew-cask-proxies }
