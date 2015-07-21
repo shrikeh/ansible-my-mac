@@ -68,7 +68,7 @@ init_mac() {
 
   export PATH=/usr/local/bin:$PATH;
 
-  export ANSIBLE_ROLES_PATH='./galaxy';
+  export ANSIBLE_ROLES_PATH='./.galaxy';
 
   rm -f "$INSTALL_ANSIBLE_SCRIPT"; # delete existing if it is already there
   curl -L --silent "$ANSIBLE_INSTALL_SCRIPT" > "$INSTALL_ANSIBLE_SCRIPT";

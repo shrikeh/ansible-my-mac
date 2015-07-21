@@ -5,4 +5,5 @@ brew_cask_cloud_casks:
   - jotta
   - mediafire-desktop
   - google-drive
+  - steam
 ...

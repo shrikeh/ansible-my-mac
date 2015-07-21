@@ -2,4 +2,5 @@
 brew_cask_screensharing_casks:
   - screenhero
   - google-hangouts
+  - teamviewer
 ...

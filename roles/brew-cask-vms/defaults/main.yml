@@ -1,9 +1,10 @@
 ---
 brew_cask_vms_casks:
-  - virtualbox
-  - vmware-fusion
-  - vagrant
-  - vagrant-manager
-  - vagrant-bar
+  - name: virtualbox
+    sudo: yes
+  - name: vmware-fusion
+  - name: vagrant
+  - name: vagrant-manager
+  - name: vagrant-bar
 
 ...
