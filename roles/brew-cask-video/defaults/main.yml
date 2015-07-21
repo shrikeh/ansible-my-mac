@@ -1,0 +1,8 @@
+---
+brew_cask_video_casks:
+  - name: vlc
+  - name: vlc-remote
+  - name: vlcstreamer
+  - name: plex-media-server
+
+...

@@ -21,6 +21,7 @@
     - { role: brew-cask-cloud }
     - { role: brew-cask-money }
     - { role: brew-cask-vms }
+    - { role: brew-cask-docker }
     - { role: brew-cask-handbrake }
     - { role: brew-cask-proxies }
     - { role: brew-cask-browsers }
