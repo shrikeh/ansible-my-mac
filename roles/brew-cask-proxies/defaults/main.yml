@@ -1,0 +1,5 @@
+---
+brew_cask_proxies_casks:
+  - charles
+  - wireshark
+...

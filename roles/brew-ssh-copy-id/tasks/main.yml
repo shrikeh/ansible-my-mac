@@ -1,0 +1,6 @@
+---
+- name: Install ssh-copy-id
+  homebrew:
+    name: ssh-copy-id
+    state: latest
+...

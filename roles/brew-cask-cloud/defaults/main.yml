@@ -1,0 +1,8 @@
+---
+brew_cask_cloud_casks:
+  - dropbox
+  - copy
+  - jotta
+  - mediafire-desktop
+  - google-drive
+...

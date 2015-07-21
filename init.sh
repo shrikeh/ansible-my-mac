@@ -57,6 +57,7 @@ init_mac() {
   local TMP_FOLDER=$(mktemp -d -t 'mac-init');
   local INSTALL_ANSIBLE_SCRIPT="$TMP_FOLDER/init.sh";
   local ANSIBLE_REPOSITORY_URL='';
+  local ANSIBLE_ROLES_FILE='./ansible-roles.yml';
 
   _get_brew;
   _get_proper_openssl;
@@ -70,6 +71,7 @@ init_mac() {
   rm -f "$INSTALL_ANSIBLE_SCRIPT"; # delete existing if it is already there
   curl -L --silent "$ANSIBLE_INSTALL_SCRIPT" > "$INSTALL_ANSIBLE_SCRIPT";
   . "$INSTALL_ANSIBLE_SCRIPT" --use-pip-version;
+  ansible-galaxy install -r "$ANSIBLE_ROLES_FILE";
   ansible-playbook -i "$INVENTORY_FILE" "$PLAYBOOK" --ask-become-pass;
 }
 

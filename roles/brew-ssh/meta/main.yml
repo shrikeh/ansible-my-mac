@@ -2,4 +2,5 @@
 dependencies:
   - { role: brew }
   - { role: brew-openssh }
+  - { role: brew-ssh-copy-id }
 ...

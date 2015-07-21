@@ -11,3 +11,11 @@
     - { role: brew-vim }
     - { role: brew-fizsh }
     - { role: brew-php56 }
+    - { role: brew-cask-books }
+    - { role: brew-cask-music }
+    - { role: brew-cask-video }
+    - { role: brew-cask-cloud }
+    - { role: brew-cask-handbrake }
+    - { role: brew-cask-proxies }
+    - { role: brew-cask-browsers }
+    - { role: brew-cask-vpn }

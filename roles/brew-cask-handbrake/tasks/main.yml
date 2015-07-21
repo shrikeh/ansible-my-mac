@@ -1,0 +1,7 @@
+---
+- name: Install handbrake
+  homebrew_cask:
+    state: present
+    name: "{{ item }}"
+  with_items: brew_cask_handbrake_casks
+...

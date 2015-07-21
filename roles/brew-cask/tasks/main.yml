@@ -1,6 +1,11 @@
 ---
+- name: Install cask tap
+  homebrew_tap:
+    tap: 'caskroom/cask'
+    state: present
+
 - name: Install brew cask
   homebrew:
     state: present
-    name: caskroom/cask/brew-cask
+    name: brew-cask
 ...
