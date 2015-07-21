@@ -1,0 +1,17 @@
+---
+ssh_config_path: ~/.ssh/config
+ssh_config_template_path: config.j2
+ssh_config_overwrite_file: no
+
+ssh_config_control_path: ~/.ssh/multiplex
+ssh_config_control_persist: 4h
+ssh_config_default_user: bhanlon
+
+ssh_config_hosts_sessiondigital: ~/.ssh/hosts/sessiondigital
+ssh_config_hosts_inviqa: ~/.ssh/hosts/inviqa
+ssh_config_hosts_personal: ~/.ssh/hosts/personal
+
+ssh_config_keys_path_personal: ~/.ssh/keys/Personal
+ssh_config_keys_path_inviqa: ~/.ssh/keys/Inviqa/
+ssh_config_keys_path_sessiondigital: ~/.ssh/keys/SessionDigital
+...

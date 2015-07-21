@@ -1,0 +1,6 @@
+---
+brew_cask_password_casks:
+  - 1password
+  - keepassx
+  - lastpass
+...

@@ -1,0 +1,8 @@
+---
+brew_cask_comms_casks:
+  - slack
+  - skype
+  - adium
+  - colloquy
+  - whatsapp
+...

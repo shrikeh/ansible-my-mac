@@ -1,0 +1,7 @@
+---
+- name: Run a terminal command to show hidden files
+  shell: defaults write com.apple.finder AppleShowAllFiles -bool YES
+  notify:
+    - Restart Finder
+
+...

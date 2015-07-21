@@ -1,0 +1,9 @@
+---
+
+
+- name: Copy ssh config to the right place
+    dest: "{{ ssh_config_path }}"
+    mode: 0640
+    src: "{{ ssh_config_template_path }}"
+    force: "{{ ssh_config_overwrite_file }}"
+...

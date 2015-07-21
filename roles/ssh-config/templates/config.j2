@@ -1,0 +1,146 @@
+ControlMaster auto
+ControlPath {{ ssh_config_control_path }}/%r@%h:%p
+ControlPersist {{ ssh_config_control_persist }}
+
+Host secure.goldquestsoftware.com
+    ProxyCommand ssh fd2session nc %h %p 2>/dev/null
+
+Host acne-uat uat.acnestudios.com
+    Hostname 94.229.168.32
+    Port 2020
+    ProxyCommand ssh frontdoor nc %h %p
+
+Host 89.167.216.192 89.167.216.188
+    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/melissa/melissa_rsa
+    ProxyCommand ssh fd2session nc %h %p 2>/dev/null
+    Port 2211
+
+Host github.com
+    Hostname github.com
+    IdentityFile {{ ssh_config_keys_path_personal }}/github/github_rsa
+    UserKnownHostsFile {{ ssh_config_hosts_personal }}/github
+
+Host web01.missguided.co.uk
+    Hostname 172.30.134.44
+
+Host web02.missguided.co.uk
+    Hostname 172.30.134.45
+
+Host web03.missguided.co.uk
+    Hostname 172.30.134.46
+
+Host web04.missguided.co.uk
+    Hostname 172.30.134.47
+
+Host web05.missguided.co.uk
+    Hostname 172.30.134.48
+
+Host web06.missguided.co.uk
+    Hostname 172.30.134.49
+
+Host admin01.missguided.co.uk
+    Hostname 172.30.134.40
+
+Host admin02.missguided.co.uk
+    Hostname 172.30.134.41
+
+Host varnish01.missguided.co.uk
+    Hostname 172.30.134.42
+
+Host varnish02.missguided.co.uk
+    Hostname 172.30.134.43
+
+Host cache01.missguided.co.uk
+    Hostname 172.30.134.38
+
+Host cache02.missguided.co.uk
+    Hostname 172.30.134.39
+
+Host nfs01.missguided.co.uk
+    Hostname 172.30.134.6
+
+Host nfs02.missguided.co.uk
+    Hostname 172.30.134.7
+
+Host db01.missguided.co.uk
+    Hostname 172.30.134.9
+
+Host db02.missguided.co.uk
+    Hostname 172.30.134.10
+
+Host db03.missguided.co.uk
+    Hostname 172.30.134.11
+
+Host db04.missguided.co.uk
+    Hostname 172.30.134.12
+
+Host db05.missguided.co.uk
+    Hostname 172.30.134.13
+
+Host db06.missguided.co.uk
+    Hostname 172.30.134.14
+
+Host *missguided* 172.30.134.*
+    UserKnownHostsFile {{ ssh_config_hosts_sessiondigital }}/missguided
+    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/missguided/missguided_rsa
+
+Host *radley* 162.13.14.40
+    UserKnownHostsFile {{ ssh_config_hosts_sessiondigital }}/radley
+    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/radley/radley_rsa
+
+Host fd2session frontdoor2.sessiondigital.com
+    ForwardAgent yes
+    Hostname frontdoor2.inviqa.com
+    UserKnownHostsFile {{ ssh_config_hosts_sessiondigital }}/frontdoor
+    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/fd2session/fd2session_rsa
+
+Host *.inviqa.com
+    UserKnownHostsFile {{ ssh_config_hosts_inviqa }}/default
+
+Host *.sessiondigital.com
+    UserKnownHostsFile {{ ssh_config_hosts_sessiondigital }}/default
+
+Host 134.213.75.207 164.177.135.8 83.138.162.221
+# ProxyCommand ssh fd2session nc %h %p 2>/dev/null
+    IdentityFile {{ ssh_config_keys_path_inviqa }}/holiday_weather/holiday_weather_rsa
+
+Host frontdoor
+    HostName frontdoor.inviqa.com
+    Port 2222
+    # prevents the connection to the server to be reset
+    ServerAliveInterval 20
+    # add here any LocalForward directives you may need
+    # allows the redirection of ldap port service to run queries for debug purposes, or to use local LDAP frontend applications
+    LocalForward 8389 fitch:389
+    # allows a direct access to Adminer for MySQL webmanagemnt
+    LocalForward 8888 forfeit-horn:80
+
+Host *.frontdoor.inviqa.com
+    ProxyCommand ssh frontdoor -W %h:%p 2> /dev/null
+
+Host !fd2session !frontdoor *.sessiondigital.com *.phplab.co.uk
+    ProxyCommand ssh fd2session nc %h %p 2>/dev/null
+    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/session_default/session_default_rsa
+
+# Digital Ocean
+Host 178.62.* 46.101.* 104.236.*
+    IdentityFile {{ ssh_config_keys_path_personal }}/digital_ocean/digital_ocean_rsa
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+# Rackspace Cloud
+Host 92.52.*
+    ProxyCommand ssh fd2session nc %h %p 2>/dev/null
+    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/session_default/session_default_rsa
+
+Host *
+    ForwardAgent no
+    TCPKeepAlive no
+    ServerAliveInterval 300
+    ServerAliveCountMax 10
+    GSSAPIAuthentication no
+    GSSAPIDelegateCredentials no
+    User {{ ssh_config_default_user }}
+    Compression yes
+    VisualHostKey yes
+    IdentityFile {{ ssh_config_keys_path_sessiondigital }}/session_default/session_default_rsa

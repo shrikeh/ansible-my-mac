@@ -1,5 +1,6 @@
 - hosts: mac
   roles:
+    - { role: finder-show-hidden-files }
     - { role: brew-bash }
     - { role: brew-utils }
     - { role: brew-cask }
@@ -11,11 +12,15 @@
     - { role: brew-vim }
     - { role: brew-fizsh }
     - { role: brew-php56 }
+    - { role: brew-s3 }
     - { role: brew-cask-books }
     - { role: brew-cask-music }
     - { role: brew-cask-video }
     - { role: brew-cask-cloud }
+    - { role: brew-cask-money }
     - { role: brew-cask-handbrake }
     - { role: brew-cask-proxies }
     - { role: brew-cask-browsers }
+    - { role: brew-cask-comms }
     - { role: brew-cask-vpn }
+    - { role: brew-cask-password-management }
