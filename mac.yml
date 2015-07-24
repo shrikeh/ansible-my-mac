@@ -34,4 +34,4 @@
     - { role: brew-cask-utilities }
     - { role: brew-cask-password-management }
     - { role: brew-cask-iterm }
-    - { role: ssh-config }
+    - { role: ssh-config, tags: ['ssh'] }

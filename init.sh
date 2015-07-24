@@ -74,7 +74,11 @@ init_mac() {
   curl -L --silent "$ANSIBLE_INSTALL_SCRIPT" > "$INSTALL_ANSIBLE_SCRIPT";
   . "$INSTALL_ANSIBLE_SCRIPT" --use-pip-version;
   ansible-galaxy install -r "$ANSIBLE_ROLES_FILE";
-  ansible-playbook -i "$INVENTORY_FILE" "$PLAYBOOK" --ask-become-pass;
+  ansible-playbook \
+  -i "$INVENTORY_FILE" "$PLAYBOOK" \
+  --ask-become-pass \
+  --ask-vault-pass \
+  --tags=ssh;
 }
 
 init_mac;
