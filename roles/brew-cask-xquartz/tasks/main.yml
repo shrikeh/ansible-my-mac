@@ -1,6 +1,6 @@
 ---
-- name: Install iterm
+- name: Install xquartz
   homebrew_cask:
-    name: iterm2
+    name: xquartz
     state: present
 ...

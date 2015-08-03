@@ -7,4 +7,5 @@
     - coreutils
     - findutils
     - osxutils
+  ignore_errors: true
 ...

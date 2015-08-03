@@ -59,6 +59,8 @@ init_mac() {
   local ANSIBLE_REPOSITORY_URL='';
   local ANSIBLE_ROLES_FILE='./ansible-roles.yml';
 
+  local VAULT_PASSWORD_FILE='/Volumes/UNTITLED/vault.txt';
+
   _get_brew;
   _get_proper_openssl;
   _get_proper_bash;
@@ -70,14 +72,21 @@ init_mac() {
 
   export ANSIBLE_ROLES_PATH='./.galaxy';
 
+  local TMP_VAULT_PASSWORD_FILE=$(mktemp -t 'vault_password');
+
+  cp "$VAULT_PASSWORD_FILE" "$TMP_VAULT_PASSWORD_FILE";
+
+  chmod ugo-x "$TMP_VAULT_PASSWORD_FILE";
+
   rm -f "$INSTALL_ANSIBLE_SCRIPT"; # delete existing if it is already there
   curl -L --silent "$ANSIBLE_INSTALL_SCRIPT" > "$INSTALL_ANSIBLE_SCRIPT";
   . "$INSTALL_ANSIBLE_SCRIPT" --use-pip-version;
+
   ansible-galaxy install -r "$ANSIBLE_ROLES_FILE";
   ansible-playbook \
   -i "$INVENTORY_FILE" "$PLAYBOOK" \
   --ask-become-pass \
-  --ask-vault-pass \
+  --vault-password-file="$TMP_VAULT_PASSWORD_FILE" \
   --tags=ssh;
 }
 
