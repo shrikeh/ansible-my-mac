@@ -1,0 +1,4 @@
+---
+homebrew_php_use_brewfile: true
+homebrew_php_brewfile_dir: "{{ role_path }}/files"
+...

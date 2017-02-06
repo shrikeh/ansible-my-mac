@@ -1,6 +1,0 @@
----
-- name: Install s3 tools
-  homebrew:
-    name: s3cmd
-    state: latest
-...

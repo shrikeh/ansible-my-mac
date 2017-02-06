@@ -1,0 +1,7 @@
+tap 'caskroom/cask'
+cask 'spotify'
+cask 'plex-media-player'
+cask 'plex-media-server'
+cask 'handbrake'
+cask 'vlc'
+cask 'lastfm'

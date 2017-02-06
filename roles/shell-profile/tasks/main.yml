@@ -1,8 +1,0 @@
----
-- name: Create a shell include file
-  template:
-    dest: "{{ shell_profile_file }}"
-    mode: 0640
-    src: "{{ shell_profile_template }}"
-    force: "{{ shell_profile_overwrite | default('yes') }}"
-...

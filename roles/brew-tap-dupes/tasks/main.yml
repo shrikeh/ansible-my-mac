@@ -1,6 +1,0 @@
----
-- name: Tap versions
-  homebrew_tap:
-    tap: homebrew/versions
-    state: present
-...

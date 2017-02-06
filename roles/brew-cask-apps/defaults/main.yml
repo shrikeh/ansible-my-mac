@@ -1,0 +1,10 @@
+---
+brew_apps_casks:
+  - name: cheatsheet
+    install_options:
+      - force
+  - name: steam
+  - name: batchmod
+  - name: adobe-reader
+
+...

@@ -1,8 +1,0 @@
----
-- name: Install video tools
-  homebrew_cask:
-    state: present
-    name: "{{ item.name }}"
-  sudo: "{{ item.sudo is defined and item.sudo }}"
-  with_items: brew_cask_video_casks
-...

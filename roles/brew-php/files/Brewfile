@@ -1,0 +1,7 @@
+tap 'homebrew/php'
+brew 'homebrew/php/php71', args: ['with-enchant', 'with-homebrew-libxml2', 'with-homebrew-libxslt', 'with-homebrew-curl']
+brew 'homebrew/php/php71-mcrypt'
+brew 'homebrew/php/composer'
+brew 'homebrew/php/php71-amqp'
+brew 'homebrew/php/php71-ssh2'
+brew 'homebrew/php/php71-xdebug'

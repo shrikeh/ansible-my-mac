@@ -1,4 +1,4 @@
 ---
-- name: Restart Finder
+- name: "{{ finder_show_hidden_files_handler_name }}"
   shell: killall Finder
 ...

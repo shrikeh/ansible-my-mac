@@ -1,0 +1,4 @@
+---
+homebrew_ruby_use_brewfile: true
+homebrew_ruby_brewfile_dir: "{{ role_path }}/files"
+...

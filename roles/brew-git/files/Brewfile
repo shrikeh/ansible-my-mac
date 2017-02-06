@@ -1,0 +1,5 @@
+tap 'caskroom/cask'
+brew 'git'
+brew 'gource'
+cask 'gitifier'
+cask 'sourcetree'

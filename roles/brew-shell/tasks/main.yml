@@ -1,0 +1,31 @@
+---
+- name: Check for Brewfile.
+  stat:
+    path: "{{ homebrew_shell_brewfile_dir }}/Brewfile"
+  register: homebrew_shell_brewfile
+
+- name: Install from Brewfile.
+  command: "brew bundle chdir={{ homebrew_shell_brewfile_dir }}"
+  when: homebrew_shell_brewfile.stat.exists and homebrew_shell_use_brewfile
+
+- name: Install Oh My zsh
+  shell: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
+
+- name: Copy ZSH template into place
+  template:
+    src: templates/zshrc.j2
+    dest: "{{ ansible_env.HOME }}/.zshrc"
+    mode: 0640
+
+- name: Copy bash profile into place
+  template:
+    src: templates/bashrc.j2
+    dest: "{{ ansible_env.HOME }}/.bashrc"
+    mode: 0640
+
+- name: Copy the shared profile into place
+  template:
+    src: templates/profile.sh.j2
+    dest: "{{ ansible_env.HOME }}/{{ homebrew_shell_shared_file }}"
+    mode: 0640
+...

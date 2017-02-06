@@ -1,0 +1,7 @@
+brew 'ruby-build'
+brew 'rbenv'
+brew 'rbenv-bundler'
+brew 'rbenv-default-gems'
+brew 'rbenv-gemset'
+brew 'bundler-completion'
+brew 'gem-completion'

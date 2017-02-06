@@ -1,9 +1,0 @@
----
-brew_cask_productivity_casks:
-  - omnifocus
-  - fantastical
-  - focus
-  - rescuetime
-  - focus
-  - anxiety
-...

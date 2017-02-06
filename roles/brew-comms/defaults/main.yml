@@ -1,0 +1,4 @@
+---
+homebrew_comms_use_brewfile: true
+homebrew_comms_brewfile_dir: "{{ role_path }}/files"
+...

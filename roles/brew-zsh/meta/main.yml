@@ -1,5 +1,0 @@
----
-dependencies:
-  - { role: brew }
-  - { role: shell-profile }
-...

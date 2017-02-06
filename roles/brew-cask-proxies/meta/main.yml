@@ -1,5 +1,0 @@
----
-dependencies:
-  - { role: brew-cask }
-  - { role: brew-cask-xquartz }
-...

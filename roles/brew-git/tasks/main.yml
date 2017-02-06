@@ -1,0 +1,10 @@
+
+- name: Check for Brewfile.
+  stat:
+    path: "{{ homebrew_git_brewfile_dir }}/Brewfile"
+  register: homebrew_git_brewfile
+
+- name: Install from Brewfile.
+  command: "brew bundle chdir={{ homebrew_shell_brewfile_dir }}"
+  when: homebrew_git_brewfile.stat.exists and homebrew_git_use_brewfile
+...

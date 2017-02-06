@@ -1,9 +1,0 @@
----
-brew_cask_music_casks:
-  - airfoil
-  - airstream
-  - spotify
-  - spotify-notifications
-  - lastfm
-  - audioscrobbler
-...

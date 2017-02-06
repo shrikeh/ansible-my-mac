@@ -1,7 +1,0 @@
----
-- name: Install OpenSSL
-  homebrew:
-    name: openssl
-    state: latest
-    install_options: universal
-...

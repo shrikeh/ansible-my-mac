@@ -1,7 +1,0 @@
----
-- name: Install OpenSSH
-  homebrew:
-    name: openssh
-    state: latest
-    install_options: with-ldns
-...

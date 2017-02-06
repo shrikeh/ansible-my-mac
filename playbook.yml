@@ -1,0 +1,16 @@
+---
+- name: Install dev env
+  hosts: mac
+  roles:
+    - { role: brew-shell }
+    - { role: brew-security }
+    - { role: finder-show-hidden-files }
+    - { role: brew-cask-apps }
+    - { role: brew-ruby }
+    - { role: brew-php }
+    - { role: brew-editors }
+    - { role: brew-docker }
+    - { role: brew-kubernetes }
+    - { role: brew-media }
+    - { role: git }
+#    - { role: brew-mail }

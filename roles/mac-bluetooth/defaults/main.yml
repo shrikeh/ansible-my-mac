@@ -1,0 +1,22 @@
+---
+mac_bluetooth_handler_name: 'Restart bluetooth audio handler'
+mac_bluetooth_defaults_settings:
+  - domain: com.apple.BluetoothAudioAgent
+    key: 'Apple Bitpool Max (editable)'
+    value: 80
+  - domain: com.apple.BluetoothAudioAgent
+    key: 'Apple Bitpool Min (editable)'
+    value: 48
+  - domain: com.apple.BluetoothAudioAgent
+    key: 'Apple Initial Bitpool (editable)'
+    value: 40
+  - domain: com.apple.BluetoothAudioAgent
+    key: 'Apple Initial Bitpool Min (editable)'
+    value: 40
+  - domain: com.apple.BluetoothAudioAgent
+    key: 'Negotiated Bitpool Max'
+    value: 58
+  - domain: com.apple.BluetoothAudioAgent
+    key: 'Negotiated Bitpool Min'
+    value: 48    
+...

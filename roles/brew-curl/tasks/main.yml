@@ -1,7 +1,0 @@
----
-- name: Install Brew cURL
-  homebrew:
-    name: curl
-    state: latest
-    install_options: "{{ brew_curl_install_options | join(',') }}"
-...

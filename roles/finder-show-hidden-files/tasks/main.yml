@@ -1,7 +1,11 @@
 ---
 - name: Run a terminal command to show hidden files
-  shell: defaults write com.apple.finder AppleShowAllFiles -bool YES
+  osx_defaults:
+    domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: bool
+    value: YES
+    state: present
   notify:
-    - Restart Finder
-
+    - "{{ finder_show_hidden_files_handler_name }}"
 ...

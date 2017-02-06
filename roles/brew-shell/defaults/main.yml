@@ -1,0 +1,18 @@
+---
+homebrew_shell_use_brewfile: true
+homebrew_shell_brewfile_dir: "{{ role_path }}/files"
+homebrew_shell_shared_file: '.profile'
+
+homebrew_zsh_plugins:
+  - git
+  - tmuxinator
+  - docker
+  - docker-compose
+  - docker-machine
+  - kitchen
+  - packer
+  - pip
+  - brew-cask
+  - vagrant
+  - launchctl
+...

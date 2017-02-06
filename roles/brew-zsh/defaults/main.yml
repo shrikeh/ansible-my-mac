@@ -1,7 +1,0 @@
----
-brew_zsh_profile_include: "{{ shell_profile_file }}"
-brew_zsh_profile_inserts:
-  - 'fpath=(/usr/local/share/zsh-completions $fpath);'
-  - 'rm -f ~/.zcompdump; compinit'
-  - 'chmod go-w /usr/local/share'
-...

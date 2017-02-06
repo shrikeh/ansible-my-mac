@@ -1,0 +1,11 @@
+---
+
+- name: Install kubernetes
+  homebrew:
+    name: kubernetes-cli
+    state: present
+
+- name: Install helm
+  homebrew:
+    name: kubernetes-helm
+    state: present

@@ -1,6 +1,0 @@
----
-brew_cask_readers_casks:
-  - calibre
-  - kindle
-  - adobe-reader
-...

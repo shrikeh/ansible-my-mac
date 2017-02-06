@@ -1,0 +1,10 @@
+---
+- name: Check for Brewfile.
+  stat:
+    path: "{{ homebrew_security_brewfile_dir }}/Brewfile"
+  register: homebrew_security_brewfile
+
+- name: Install from Brewfile.
+  command: "brew bundle chdir={{ homebrew_security_brewfile_dir }}"
+  when: homebrew_security_brewfile.stat.exists and homebrew_security_use_brewfile
+...

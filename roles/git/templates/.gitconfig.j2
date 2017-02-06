@@ -1,0 +1,12 @@
+[user]
+	email = {{ git_user_email | mandatory }}
+	name = {{ git_user_name | mandatory }}
+
+[alias]
+  co = checkout
+  st = status
+  cob = checkout -b
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+  cm = !git add -p && git commit -m
+  undo = reset HEAD~1 --mixed
+  amend = commit -S -a --amend

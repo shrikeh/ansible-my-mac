@@ -1,5 +1,0 @@
----
-brew_cask_vpn_casks:
-  - viscosity
-  - tunnelblick
-...

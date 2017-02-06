@@ -1,7 +1,0 @@
----
-- name: Install Omni tools
-  homebrew_cask:
-    state: present
-    name: "{{ item }}"
-  with_items: brew_cask_omni_casks
-...

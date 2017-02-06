@@ -1,0 +1,4 @@
+---
+homebrew_git_use_brewfile: true
+homebrew_git_brewfile_dir: "{{ role_path }}/files"
+...

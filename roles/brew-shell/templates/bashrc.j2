@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# {{ ansible_managed }}
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
+if ! [ "${SHARED_PROFILE_LOADED}" = true ] ; then
+  . ~/{{ homebrew_shell_shared_file }}
+fi

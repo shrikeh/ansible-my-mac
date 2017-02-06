@@ -1,0 +1,190 @@
+tap 'caskroom/cask'
+tap 'homebrew/boneyard'
+tap 'homebrew/bundle'
+
+tap 'homebrew/core'
+tap 'homebrew/dupes'
+tap 'homebrew/gui'
+tap 'homebrew/services'
+
+brew 'mas'
+brew 'python', args: ['universal', 'with-berkeley-db4', 'with-tcl-tk']
+brew 'libyaml'
+cask 'java'
+cask 'xquartz'
+brew 'aalib'
+brew 'gdbm', args: ['universal']
+brew 'readline'
+brew 'sqlite', args: ['universal']
+brew 'ansible'
+brew 'arm'
+brew 'aspell'
+brew 'gettext'
+brew 'libffi'
+brew 'pcre'
+brew 'glib'
+brew 'libpng'
+brew 'freetype'
+brew 'fontconfig'
+brew 'pixman'
+brew 'cairo'
+brew 'pkg-config'
+brew 'gobject-introspection'
+brew 'atk'
+brew 'libsigc++'
+brew 'glibmm'
+brew 'atkmm'
+brew 'libxml2'
+brew 'augeas'
+brew 'autoconf'
+brew 'awscli'
+brew 'babl'
+brew 'bdw-gc'
+brew 'berkeley-db4'
+brew 'bfg'
+brew 'boost'
+brew 'c-ares'
+brew 'cairomm'
+brew 'dialog'
+brew 'certbot'
+brew 'coreutils'
+
+brew 'curl'
+brew 'dbus'
+brew 'diff-so-fancy'
+brew 'direnv'
+brew 'enchant'
+brew 'jpeg'
+brew 'libtiff'
+brew 'wxmac'
+brew 'erlang'
+brew 'findutils'
+brew 'webp'
+brew 'gd'
+brew 'shared-mime-info'
+brew 'gdk-pixbuf'
+brew 'glew'
+brew 'gmp'
+brew 'libtasn1'
+brew 'libunistring'
+brew 'nettle'
+brew 'p11-kit'
+brew 'gnutls'
+brew 'sdl2'
+brew 'sdl2_image'
+
+brew 'gsettings-desktop-schemas'
+brew 'gsl'
+brew 'hicolor-icon-theme'
+brew 'icu4c'
+brew 'harfbuzz'
+brew 'pango'
+brew 'gtk+'
+brew 'libepoxy'
+brew 'gtk+3'
+brew 'py2cairo'
+brew 'pygobject'
+brew 'pygtk'
+brew 'pangomm'
+brew 'gtkmm'
+brew 'jansson'
+brew 'jemalloc'
+
+brew 'libcroco'
+brew 'libev'
+brew 'libevent'
+brew 'libidn'
+brew 'libmetalink'
+brew 'librsvg'
+brew 'libssh2'
+brew 'libwmf'
+brew 'little-cms'
+brew 'makedepend'
+
+brew 'maven'
+brew 'protobuf'
+
+brew 'moreutils'
+brew 'spdylay'
+brew 'nghttp2'
+brew 'nginx'
+brew 'osxutils'
+brew 'packer'
+brew 'popt'
+brew 'pv'
+brew 'pyenv'
+brew 'qemu'
+brew 'rabbitmq', restart_service: true
+brew 'rabbitmq-c'
+brew 'rtmpdump'
+brew 'scala'
+
+brew 'terraform'
+
+
+brew 'unixodbc'
+brew 'utf8proc'
+brew 'wget'
+brew 'xhyve', args: ['HEAD']
+brew 'xz'
+brew 'homebrew/boneyard/unfs3'
+
+brew 'homebrew/dupes/tcl-tk'
+
+cask 'adobe-reader'
+cask 'alfred'
+cask 'banktivity'
+cask 'bartender'
+cask 'cheatsheet'
+cask 'chefdk'
+cask 'chromium'
+
+cask 'dropbox'
+cask 'fantastical'
+cask 'firefox'
+cask 'flux'
+cask 'focus'
+
+cask 'google-chrome'
+cask 'google-drive'
+cask 'growlnotify'
+
+cask 'hosts'
+cask 'istat-menus'
+
+
+cask 'knock'
+
+cask 'libreoffice'
+cask 'moom'
+
+cask 'postman'
+cask 'quicksilver'
+cask 'rubymine'
+cask 'screenhero'
+
+cask 'soundflower'
+
+cask 'thunderbird'
+cask 'utorrent'
+cask 'tunnelblick'
+cask 'wireshark'
+mas 'Kindle', id: 405399194
+mas 'Eggscellent', id: 522294492
+mas 'Growl', id: 467939042
+mas 'Twitter', id: 409789998
+mas 'Airmail 2', id: 918858936
+mas 'Evernote', id: 406056744
+mas 'Markdown Pro', id: 465965038
+
+mas 'TweetDeck', id: 485812721
+mas 'Keynote', id: 409183694
+mas 'Pocket', id: 568494494
+mas 'Be Focused', id: 973134470
+mas 'Wunderlist', id: 410628904
+mas 'Slack', id: 803453959
+mas 'Dash', id: 458034879
+mas 'Reeder', id: 880001334
+mas 'feedly', id: 865500966
+mas 'Xcode', id: 497799835
+mas 'LastPass', id: 926036361

@@ -1,0 +1,9 @@
+---
+- name: Install useful apps via Homebrew cask
+  homebrew_cask:
+    name: "{{ item.name }}"
+    install_options: "force, {{ item.install_options | default(omit) | join(', ') }}"
+    state: present
+  with_items:
+    - "{{ brew_apps_casks }}"
+...

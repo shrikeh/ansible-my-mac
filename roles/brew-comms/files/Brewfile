@@ -1,0 +1,5 @@
+tap 'caskroom/cask'
+cask 'adium'
+cask 'colloquy'
+cask 'skype'
+cask 'whatsapp'

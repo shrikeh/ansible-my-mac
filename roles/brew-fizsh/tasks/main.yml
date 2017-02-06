@@ -1,6 +1,0 @@
----
-- name: Install fizsh
-  homebrew:
-    name: fizsh
-    state: latest
-...

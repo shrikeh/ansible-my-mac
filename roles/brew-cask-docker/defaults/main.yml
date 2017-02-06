@@ -1,5 +1,0 @@
----
-brew_cask_docker_casks:
-  - boot2docker
-  - boot2docker-status
-...

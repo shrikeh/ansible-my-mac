@@ -1,0 +1,6 @@
+---
+- name: Install Docker for Mac via cask
+  homebrew_cask:
+    name: docker
+    state: present
+...

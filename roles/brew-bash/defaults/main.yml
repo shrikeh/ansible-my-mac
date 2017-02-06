@@ -1,5 +1,0 @@
----
-brew_bash_profile_file: ~/.bash_profile
-brew_bash_profile_file_template: 'bash_profile.j2'
-brew_bash_profile_include: "{{ shell_profile_file }}"
-...

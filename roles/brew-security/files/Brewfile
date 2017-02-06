@@ -1,0 +1,16 @@
+tap 'caskroom/cask'
+brew 'homebrew/dupes/openssh'
+brew 'mas'
+brew 'openssl', args: ['universal']
+brew 'openssh', args: ['with-ldns']
+brew 'keybase'
+brew 'ssh-copy-id'
+brew 'mobile-shell'
+brew 'tor'
+cask 'dnscrypt'
+cask 'knox'
+cask '1password'
+cask 'keepassx'
+cask 'jotta'
+cask 'veracrypt'
+mas 'Authy Bluetooth', id: 668841348

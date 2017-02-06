@@ -1,5 +1,0 @@
----
-brew_cask_handbrake_casks:
-  - handbrake
-  - handbrakecli
-...

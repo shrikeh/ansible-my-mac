@@ -1,0 +1,13 @@
+---
+- name: Update Mac Bluetooth settings
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type | default(omit) }}"
+    value: "{{ item.value | default(omit) }}"
+    state: "{{ item.state | default('present') }}"
+  with_items:
+    - "{{ mac_bluetooth_defaults_settings }}"
+  notify:
+    - "{{ mac_bluetooth_handler_name }}"
+...

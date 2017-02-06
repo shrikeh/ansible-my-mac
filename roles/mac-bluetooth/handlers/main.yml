@@ -1,0 +1,6 @@
+---
+- name: "{{ mac_bluetooth_handler_name }}"
+  shell: killall coreaudiod
+  become: yes
+  ignore_errors: yes
+...

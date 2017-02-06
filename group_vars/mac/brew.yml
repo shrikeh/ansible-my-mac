@@ -1,0 +1,46 @@
+---
+homebrew_brewfile_dir: roles/brew/files
+
+homebrew_installed_packages:
+  - mas
+  - ssh-copy-id
+  - pv
+  - coreutils
+  - moreutils
+  - findutils
+  - osxutils
+  - spark
+  - tree
+  - cowsay
+  - gource
+  - wget
+  - ruby-build
+  - terraform
+
+homebrew_cask_apps:
+  - 1password
+  - banktivity
+  - adium
+  - alfred
+  - atom
+  - phpstorm
+  - hosts
+  - istat-menus
+  - bartender
+  - colloquy
+  - chromium
+  - knox
+#  - cheatsheet
+  - sourcetree
+  - whatsapp
+  - dropbox
+  - iterm2
+  - postman
+  - jotta
+  - quicksilver
+  - screenhero
+  - thunderbird
+  - spotify
+  - moom
+  - google-chrome
+  - firefox

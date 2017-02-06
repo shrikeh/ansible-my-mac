@@ -1,6 +1,0 @@
----
-- name: Tap dupes
-  homebrew_tap:
-    tap: homebrew/dupes
-    state: present
-...
