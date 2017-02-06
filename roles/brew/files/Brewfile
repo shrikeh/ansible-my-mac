@@ -1,5 +1,4 @@
 tap 'caskroom/cask'
-tap 'homebrew/boneyard'
 tap 'homebrew/bundle'
 
 tap 'homebrew/core'
@@ -128,8 +127,6 @@ brew 'wget'
 brew 'xhyve', args: ['HEAD']
 brew 'xz'
 brew 'homebrew/boneyard/unfs3'
-
-brew 'homebrew/dupes/tcl-tk'
 
 cask 'adobe-reader'
 cask 'alfred'
