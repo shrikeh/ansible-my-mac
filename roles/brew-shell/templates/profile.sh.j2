@@ -2,25 +2,22 @@
 
 # {{ ansible_managed }}
 
+set -a;
+
 function setup_shell_env() {
 
-  local DIR="$(greadlink -f ${1})";
-  #echo $DIR;
   local SHELL_NAME="$(basename ${SHELL})";
 
-  #if which chef > /dev/null; then eval "$(chef shell-init ${SHELL_NAME})"; fi;
+  export PYTHONPATH="$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH";
+
+  if which chef > /dev/null; then eval "$(chef shell-init ${SHELL_NAME})"; fi;
   if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi;
   if which phpenv > /dev/null; then eval "$(phpenv init -)"; fi;
   if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi;
   if which hem > /dev/null; then eval "$(hem shell-init ${SHELL_NAME})"; fi;
 
   export SHARED_PROFILE_LOADED=true;
-
-  export PATH=~/.phpenv/bin:${PATH};
   export EDITOR=vim;
-
-  #source shell/aliases/gource.sh
-  export PATH=~/.phpenv/bin:${PATH};
 }
 
 setup_shell_env $_;

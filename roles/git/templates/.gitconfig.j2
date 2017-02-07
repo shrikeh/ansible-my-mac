@@ -10,3 +10,4 @@
   cm = !git add -p && git commit -m
   undo = reset HEAD~1 --mixed
   amend = commit -S -a --amend
+  refresh = !git stash && git fetch --all && git merge develop && git stash pop
