@@ -1,0 +1,15 @@
+# {{ ansible_managed }}
+
+ControlMaster auto
+ControlPath ~/.ssh/multiplex/%r@%h:%p
+
+Host *
+User {{ homebrew_ssh_config_user }}
+ServerAliveInterval {{ homebrew_ssh_config_server_alive_interval }}
+ForwardAgent yes
+Compression yes
+GSSAPIAuthentication no
+GSSAPIDelegateCredentials no
+{% for key_path in homebrew_ssh_config_identity_files %}
+IdentityFile {{ key_path }}
+{% endfor %}

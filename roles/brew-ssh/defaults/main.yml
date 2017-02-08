@@ -1,0 +1,12 @@
+---
+homebrew_ssh_directory: "{{ ansible_env.HOME }}/.ssh"
+
+homebrew_ssh_multiplex_directory: "{{ homebrew_ssh_directory }}/multiplex"
+homebrew_ssh_config_path: "{{ homebrew_ssh_directory }}/config"
+homebrew_ssh_config_user: shrikeh
+homebrew_ssh_config_server_alive_interval: 20
+homebrew_ssh_config_identity_files:
+  - '~/.ssh/id_ed25519'
+  - '~/.ssh/id_ecdsa'
+  - '~/.ssh/id_rsa'
+...

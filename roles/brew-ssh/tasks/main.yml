@@ -1,0 +1,19 @@
+---
+- name: Ensure the ssh directory exists
+  file:
+    path: "{{ homebrew_ssh_directory }}"
+    state: directory
+    mode: 0700
+
+- name: Configure ssh
+  template:
+    src: templates/config.j2
+    dest: "{{ ansible_env.HOME }}/.ssh/config"
+    mode: 0644
+
+- name: Create the master control directory
+  file:
+    path: "{{ homebrew_ssh_multiplex_directory }}"
+    state: directory
+    mode: 0700
+...
