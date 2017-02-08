@@ -8,6 +8,13 @@
   command: "brew bundle chdir={{ homebrew_shell_brewfile_dir }}"
   when: homebrew_shell_brewfile.stat.exists and homebrew_shell_use_brewfile
 
+- name: Add zsh to the list of available system shells
+  lineinfile:
+    line: "{{ homebrew_shell_zsh_path }}"
+    dest: /etc/shells
+    state: present
+  become: yes
+
 - name: Install Oh My zsh
   shell: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
 

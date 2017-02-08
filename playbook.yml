@@ -4,6 +4,7 @@
   roles:
     - { role: brew-shell }
     - { role: brew-security }
+    - { role: brew-ssh }
     - { role: finder-show-hidden-files }
     - { role: brew-cask-apps }
     - { role: brew-ruby }
