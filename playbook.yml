@@ -13,5 +13,6 @@
     - { role: brew-docker }
     - { role: brew-kubernetes }
     - { role: brew-media }
+    - { role: brew-comms }
     - { role: git }
 #    - { role: brew-mail }

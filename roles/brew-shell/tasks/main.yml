@@ -24,6 +24,11 @@
     dest: "{{ ansible_env.HOME }}/.zshrc"
     mode: 0640
 
+- name: Set the default shell
+  user:
+    name: "{{ lookup('env', 'USER') }}"
+    shell: "{{ homebrew_shell_zsh_path }}"
+
 - name: Copy bash profile into place
   template:
     src: templates/bashrc.j2
